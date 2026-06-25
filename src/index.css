@@ -1,0 +1,63 @@
+:root {
+  --ink-black: #0b0e14;
+  --panel: #121723;
+  --panel-raised: #161d2b;
+  --parchment: #e9e3d2;
+  --parchment-dim: #b9b3a0;
+  --brass: #c99a4b;
+  --brass-dim: #8a6a35;
+  --teal: #4d8f8a;
+  --terracotta: #c8633f;
+  --hairline: rgba(201, 154, 75, 0.25);
+
+  --font-display: 'Spectral', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at 20% -10%, #182338 0%, var(--ink-black) 55%) fixed;
+  color: var(--parchment);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--brass);
+}
+
+button {
+  font-family: var(--font-mono);
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
